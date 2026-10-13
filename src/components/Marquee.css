@@ -1,0 +1,70 @@
+/* Clips the tilted ribbon so it never causes horizontal scrolling */
+.marquee-clip {
+  overflow: hidden;
+  padding-block: clamp(12px, 2vw, 32px);
+}
+
+.marquee {
+  overflow: hidden;
+  background: var(--pink);
+  padding-block: clamp(14px, 2vw, 22px);
+  rotate: -1.6deg;
+  margin-inline: -2vw;
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee 48s linear infinite;
+}
+
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+
+.marquee__row {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.marquee__row li {
+  padding-inline: clamp(14px, 2vw, 28px);
+}
+
+.marquee__row .display {
+  font-size: var(--step-3);
+  font-style: italic;
+  font-weight: 340;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.marquee__spark {
+  display: flex;
+  color: var(--ink);
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track {
+    animation: none;
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .marquee__row + .marquee__row {
+    display: none;
+  }
+
+  .marquee__row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

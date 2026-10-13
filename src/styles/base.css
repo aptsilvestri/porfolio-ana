@@ -1,0 +1,273 @@
+@import '@fontsource-variable/fraunces/soft.css';
+@import '@fontsource-variable/fraunces/soft-italic.css';
+@import '@fontsource-variable/instrument-sans/wght.css';
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: var(--header-h);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: var(--step-0);
+  line-height: 1.55;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+dl,
+dd,
+ul,
+ol {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+img,
+video,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+::selection {
+  background: var(--pink);
+  color: var(--ink);
+}
+
+/* Focus: always visible for keyboard users, quiet for pointer users. */
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px var(--pink);
+  border-radius: 2px;
+}
+
+[tabindex='-1']:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* ─── Type primitives ────────────────────────────────────────────── */
+.display {
+  font-family: var(--font-display);
+  font-weight: 380;
+  font-variation-settings: 'SOFT' 100;
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+}
+
+.display em,
+em.display {
+  font-style: italic;
+  font-weight: 330;
+}
+
+.eyebrow {
+  font-size: var(--step--1);
+  font-weight: 560;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.muted {
+  color: var(--fg-soft);
+}
+
+/* ─── Layout primitives ──────────────────────────────────────────── */
+.wrap {
+  width: 100%;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  padding: 10px 16px;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 999px;
+  transform: translateY(-160%);
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.skip-link:focus-visible {
+  transform: none;
+}
+
+/* ─── Shared link & button styles ────────────────────────────────── */
+.link-underline {
+  background: linear-gradient(var(--pink), var(--pink)) 0 100% / 100% 0.3em no-repeat;
+  transition: background-size var(--dur) var(--ease-out);
+  padding-bottom: 0.04em;
+}
+
+.link-underline:hover {
+  background-size: 100% 100%;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
+  padding: 0.95em 1.5em;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font-weight: 560;
+  font-size: var(--step-0);
+  line-height: 1;
+  transition:
+    background-color var(--dur) var(--ease-out),
+    color var(--dur) var(--ease-out);
+}
+
+.button svg {
+  transition: transform var(--dur) var(--ease-spring);
+}
+
+.button:hover {
+  background: var(--pink);
+  color: var(--ink);
+}
+
+.button:hover svg {
+  transform: translateY(3px);
+}
+
+/* ─── Reveal on scroll ───────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity var(--dur-slow) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out);
+  transition-delay: calc(var(--i, 0) * 90ms);
+}
+
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Masked line reveal for headlines */
+.line {
+  display: block;
+  overflow: hidden;
+  /* room for descenders and italic overhang */
+  padding: 0.04em 0.08em 0.1em;
+  margin: -0.04em -0.08em -0.1em;
+}
+
+.line > span {
+  display: inline-block;
+  transform: translateY(110%);
+  transition: transform 1s var(--ease-out);
+  transition-delay: calc(var(--i, 0) * 85ms + 120ms);
+}
+
+.is-in .line > span,
+.line.is-in > span {
+  transform: none;
+}
+
+/* ─── Page transitions (View Transitions API) ───────────────────── */
+::view-transition-old(root) {
+  animation: vt-out 260ms var(--ease-out) both;
+}
+
+::view-transition-new(root) {
+  animation: vt-in 520ms var(--ease-out) both;
+}
+
+@keyframes vt-out {
+  to {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes vt-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+}
+
+/* ─── Reduced motion: final states, no movement ─────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal,
+  .line > span {
+    opacity: 1;
+    transform: none;
+  }
+}

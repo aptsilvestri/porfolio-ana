@@ -1,0 +1,111 @@
+.project__head {
+  padding-top: calc(var(--header-h) + clamp(24px, 5vw, 72px));
+  padding-bottom: clamp(32px, 5vw, 64px);
+}
+
+.project__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 560;
+  padding: 8px 14px 8px 10px;
+  margin-left: -10px;
+  border-radius: 999px;
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+
+.project__back:hover {
+  background: color-mix(in srgb, var(--paper) 60%, transparent);
+}
+
+.project__title {
+  font-size: var(--step-5);
+  margin-block: clamp(32px, 6vw, 88px) clamp(32px, 4vw, 56px);
+}
+
+.project__title em {
+  font-weight: 330;
+}
+
+.project__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px clamp(24px, 5vw, 72px);
+  padding-top: 18px;
+  border-top: 1px solid var(--ink);
+}
+
+.project__meta dt,
+.project__credits dt {
+  font-size: var(--step--1);
+  font-weight: 560;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project__meta dd,
+.project__credits dd {
+  margin-top: 4px;
+}
+
+.project__body {
+  display: grid;
+  gap: clamp(56px, 8vw, 120px);
+  padding-block: clamp(40px, 6vw, 80px) var(--section);
+}
+
+.project__text {
+  display: grid;
+  gap: 1em;
+  max-width: 62ch;
+  margin-left: auto;
+  margin-right: clamp(0px, 8vw, 120px);
+}
+
+.project__summary {
+  font-family: var(--font-display);
+  font-variation-settings: 'SOFT' 100;
+  font-size: var(--step-2);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.project__gallery {
+  display: grid;
+  gap: clamp(40px, 6vw, 96px);
+}
+
+.project__credits {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--ink);
+}
+
+.project__next {
+  display: block;
+  padding-block: clamp(48px, 8vw, 120px);
+}
+
+.project__next .wrap {
+  display: grid;
+  gap: 12px;
+}
+
+.project__next-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2em;
+  font-size: var(--step-4);
+  font-style: italic;
+  font-weight: 340;
+}
+
+.project__next-title svg {
+  transition: transform var(--dur) var(--ease-spring);
+}
+
+.project__next:hover .project__next-title svg {
+  transform: translate(6px, -6px);
+}

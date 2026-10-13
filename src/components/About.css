@@ -1,0 +1,165 @@
+.about {
+  padding-block: var(--section);
+  background: var(--blush);
+  border-radius: clamp(24px, 4vw, 56px) clamp(24px, 4vw, 56px) 0 0;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(32px, 5vw, 72px) clamp(16px, 2.4vw, 40px);
+}
+
+.about__label {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about__label-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--pink-deep);
+}
+
+.about__statement {
+  grid-column: 1 / span 11;
+  font-size: var(--step-4);
+}
+
+.about__statement em {
+  font-weight: 330;
+}
+
+.about__body {
+  grid-column: 6 / span 6;
+  display: grid;
+  gap: 1.1em;
+  font-size: var(--step-0);
+  max-width: 58ch;
+}
+
+.about__lead {
+  font-family: var(--font-display);
+  font-variation-settings: 'SOFT' 100;
+  font-size: var(--step-2);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.about__body strong {
+  font-weight: 620;
+  background: linear-gradient(transparent 62%, var(--pink) 62%);
+}
+
+.about__facts {
+  grid-column: 1 / span 4;
+  grid-row: 3;
+  align-self: start;
+  display: grid;
+  border-top: 1px solid var(--ink);
+}
+
+.about__facts > div {
+  display: grid;
+  grid-template-columns: 7.5em minmax(0, 1fr);
+  gap: 12px;
+  padding-block: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.about__facts dt {
+  font-size: var(--step--1);
+  font-weight: 560;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-top: 0.2em;
+}
+
+.about__skills {
+  grid-column: 1 / -1;
+  margin-top: clamp(24px, 4vw, 56px);
+}
+
+.about__skills > h3 {
+  margin-bottom: 16px;
+}
+
+.about__skills ol {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--ink);
+}
+
+.skill {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: clamp(18px, 2.4vw, 28px) 12px;
+  border-bottom: 1px solid var(--line);
+  isolation: isolate;
+}
+
+/* Colour swatch that rises behind each discipline on hover */
+.skill::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform var(--dur) var(--ease-out);
+}
+
+.skill:hover::before {
+  transform: none;
+}
+
+.skill--pink::before {
+  background: var(--pink);
+}
+.skill--lavender::before {
+  background: var(--lavender);
+}
+.skill--butter::before {
+  background: var(--butter);
+}
+.skill--blue::before {
+  background: var(--blue);
+}
+.skill--blush::before {
+  background: var(--paper);
+}
+
+.skill__num {
+  font-size: var(--step--1);
+  font-weight: 560;
+}
+
+.skill__name {
+  font-size: var(--step-2);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 900px) {
+  .about__statement,
+  .about__body,
+  .about__facts {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .about__skills ol {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .about__skills ol {
+    grid-template-columns: 1fr;
+  }
+}

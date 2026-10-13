@@ -1,0 +1,129 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+  height: var(--header-h);
+  transition: background-color var(--dur) var(--ease-out);
+}
+
+.header.is-scrolled {
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: saturate(1.4) blur(10px);
+  -webkit-backdrop-filter: saturate(1.4) blur(10px);
+}
+
+.header__inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 3px;
+  font-size: 1.9rem;
+  line-height: 1;
+}
+
+.header__logo .display {
+  font-style: italic;
+  font-weight: 420;
+  letter-spacing: -0.04em;
+}
+
+.header__dot {
+  width: 0.32em;
+  height: 0.32em;
+  margin-bottom: 0.14em;
+  border-radius: 50%;
+  background: var(--pink);
+  transition: transform var(--dur) var(--ease-spring);
+}
+
+.header__logo:hover .header__dot {
+  transform: translateY(-0.45em) scale(1.15);
+}
+
+.header__nav {
+  display: flex;
+  gap: clamp(4px, 1.5vw, 12px);
+}
+
+.header__link {
+  position: relative;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 520;
+  font-size: 0.95rem;
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+
+.header__link:hover {
+  background: var(--blush);
+}
+
+.header__link.is-active {
+  background: var(--pink);
+}
+
+/* ─── Scroll timeline ───────────────────────────────────────────── */
+.timeline {
+  --progress: 0;
+  position: absolute;
+  inset: auto var(--gutter) 0;
+  height: 1px;
+  background: var(--line);
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease-out);
+}
+
+.is-scrolled .timeline {
+  opacity: 1;
+}
+
+.timeline__fill {
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+  transform-origin: left;
+  transform: scaleX(var(--progress));
+}
+
+.timeline__head {
+  position: absolute;
+  top: -4px;
+  left: calc(var(--progress) * 100%);
+  width: 2px;
+  height: 9px;
+  margin-left: -1px;
+  background: var(--ink);
+  border-radius: 2px;
+}
+
+.timeline__key {
+  position: absolute;
+  top: -3.5px;
+  width: 8px;
+  height: 8px;
+  margin-left: -4px;
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  transform: rotate(45deg);
+  transition:
+    background-color var(--dur) var(--ease-out),
+    transform var(--dur) var(--ease-spring);
+}
+
+.timeline__key.is-active {
+  background: var(--pink);
+  transform: rotate(45deg) scale(1.25);
+}
+
+@media (max-width: 480px) {
+  .header__link {
+    padding: 8px 9px;
+  }
+}
