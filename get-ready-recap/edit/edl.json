@@ -1,0 +1,41 @@
+{
+  "_doc": "Edit decision list for the Get Ready recap. Times are source seconds. 'beats' sets a duration in music beats instead of an out point. audio: dia = dialogue at full level, amb = natural sound at low level under music, mute = picture only. layout: native (1080x1920 source, optional zoom), wide (4K laptop shot, full frame), screen (punch-in on the laptop screen over a blurred fill), endcard (blurred, darkened background for the closing title). cx/cy = centre of the stream picture in 4K source pixels.",
+  "sources": {
+    "promo_1": "5fc537d0-promo_1.mp4",
+    "promo_2": "81b08c32-promo_2.mp4",
+    "promo_3": "5941bc97-promo_3.mp4",
+    "experience_1": "d2166a91-experience_1.mp4",
+    "experience_2": "536782e0-experience_2.mp4"
+  },
+  "segments": [
+    {"id": "H1", "section": "hook", "src": "experience_2", "in": 19.0, "beats": 1, "layout": "screen", "cx": 1170, "cy": 1690, "audio": "mute", "why": "Most striking frame: Mavriq speaker on yellow, live session preview"},
+    {"id": "H2", "section": "hook", "src": "experience_1", "in": 11.0, "beats": 1, "layout": "screen", "cx": 1110, "cy": 1586, "audio": "mute", "why": "CACEIS speaker preview, a second partner company"},
+    {"id": "H3", "section": "hook", "src": "experience_1", "in": 21.0, "beats": 1, "layout": "screen", "cx": 1120, "cy": 1572, "audio": "mute", "why": "Two-speaker panel preview; establishes 'real sessions' before the promo story"},
+    {"id": "H4", "section": "hook", "src": "promo_1", "in": 6.62, "out": 12.82, "layout": "native", "audio": "dia", "why": "'E la novita si chiama Get Ready, quindi tra settembre/ottobre ci saranno 15 appuntamenti con aziende diverse' - names the campaign and states what it is"},
+
+    {"id": "P1", "section": "promo", "src": "promo_2", "in": 0.0, "out": 1.80, "layout": "native", "audio": "dia", "why": "Tech & Data ad opening hook: 'Se vuoi lavorare nel mondo tech e dei dati'"},
+    {"id": "P2", "section": "promo", "src": "promo_3", "in": 0.80, "out": 5.80, "layout": "native", "audio": "dia", "why": "Finance ad, same script structure: shows the campaign was tailored per vertical. '...ma inviare CV a vuoto non sta funzionando, ascolta qui.'"},
+    {"id": "P3", "section": "promo", "src": "promo_2", "in": 4.92, "out": 7.30, "layout": "native", "audio": "dia", "why": "'Non serve tirare a indovinare cosa cercano i recruiter.' - the campaign promise"},
+    {"id": "P4", "section": "promo", "src": "promo_3", "in": 8.56, "out": 13.40, "layout": "native", "zoom": 1.0, "audio": "dia", "why": "'Dal 17 settembre su Joinrs te lo diranno direttamente gli HR di grandi aziende' - who and when"},
+    {"id": "P5", "section": "promo", "src": "promo_3", "in": 13.40, "out": 15.80, "layout": "native", "zoom": 1.12, "fy": 0.30, "audio": "dia", "join": true, "why": "'...come CACEIS, AMCO e Allianz Trade.' Punch-in on the named partners; continuous audio"},
+    {"id": "P6", "section": "promo", "src": "promo_2", "in": 23.48, "out": 26.36, "layout": "native", "audio": "dia", "why": "'E gratis e ti daremo anche un attestato per il tuo CV.' - the benefit"},
+
+    {"id": "T1", "section": "transition", "src": "promo_3", "in": 15.82, "out": 19.96, "layout": "native", "zoom": 1.06, "fy": 0.30, "audio": "dia", "why": "'Ogni settimana saremo in diretta su Zoom per esplorare ruoli come il Bank Analyst' - the promise of the live sessions; cuts straight into the Bank Analyst session"},
+
+    {"id": "L1", "section": "live", "src": "experience_1", "in": 2.90, "out": 4.60, "layout": "wide", "audio": "dia", "label": "finance", "why": "Wide: the live session on screen, 'Depositary Bank Analyst in CACEIS | Get Ready Finance #1'. Payoff of 'Bank Analyst' line"},
+    {"id": "L2", "section": "live", "src": "experience_1", "in": 4.60, "out": 6.50, "layout": "screen", "cx": 1083, "cy": 1605, "audio": "dia", "join": true, "label": "finance", "why": "Punch-in on the CACEIS speaker: 'Ciao a tutti, grazie a voi per l'opportunita'"},
+    {"id": "L3", "section": "live", "src": "experience_1", "in": 13.30, "out": 15.20, "layout": "screen", "cx": 1120, "cy": 1598, "audio": "amb", "label": "finance", "fit": true, "why": "Two speakers from the same session; natural sound under music"},
+    {"id": "L4", "section": "live", "src": "experience_1", "in": 0.30, "out": 1.90, "layout": "screen", "cx": 1067, "cy": 1536, "audio": "amb", "label": "finance", "why": "Joinrs host with the session's animated eyes graphic; adds colour and the host's presence"},
+    {"id": "L5", "section": "live", "src": "experience_2", "in": 9.25, "out": 11.40, "layout": "wide", "audio": "dia", "label": "marketing", "why": "Second session, 'Business Analyst in Mavriq | Get Ready Marketing&Sales #1'. Host: 'e poi iniziamo, e via via c'e poi tutto il resto'"},
+    {"id": "L6", "section": "live", "src": "experience_2", "in": 11.40, "out": 15.72, "layout": "screen", "cx": 1200, "cy": 1700, "audio": "dia", "join": true, "label": "marketing", "why": "'Abbiamo un quiz, abbiamo un momento un po' piu interattivo' - what happened in the sessions"},
+    {"id": "M1", "section": "live", "src": "experience_2", "in": 2.00, "beats": 1, "layout": "wide", "audio": "amb", "why": "Music-driven beat cut: host on the Joinrs-branded background"},
+    {"id": "M2", "section": "live", "src": "experience_1", "in": 9.60, "beats": 1, "layout": "screen", "cx": 1087, "cy": 1598, "audio": "amb", "why": "Beat cut: CACEIS speaker smiling"},
+    {"id": "M3", "section": "live", "src": "experience_1", "in": 20.20, "beats": 1, "layout": "wide", "audio": "amb", "why": "Beat cut: wide of the panel"},
+    {"id": "L7", "section": "live", "src": "experience_2", "in": 17.80, "out": 22.62, "layout": "screen", "cx": 1200, "cy": 1690, "audio": "dia", "label": "marketing", "why": "Mavriq speaker: 'Grazie mille. Va, il palco e stato scaldato perfettamente.' - warm, memorable line to close the live section"},
+
+    {"id": "C1", "section": "close", "src": "promo_1", "in": 0.40, "beats": 1, "layout": "native", "audio": "mute", "why": "Bookend: back to the promo hosts"},
+    {"id": "C2", "section": "close", "src": "promo_2", "in": 21.10, "beats": 1, "layout": "native", "audio": "mute", "why": "Bookend: Tech & Data ad"},
+    {"id": "C3", "section": "close", "src": "promo_3", "in": 28.40, "beats": 1, "layout": "native", "audio": "mute", "why": "Bookend: Finance ad, smiling"},
+    {"id": "C4", "section": "close", "src": "experience_1", "in": 15.00, "out": "END", "layout": "endcard", "audio": "mute", "why": "End card over the live session footage: GET READY + the three verticals + joinrs"}
+  ]
+}
