@@ -1,7 +1,7 @@
 {
   "_doc": "Edit decision list for the Get Ready recap. Times are source seconds. 'beats' sets a duration in music beats instead of an out point. audio: dia = dialogue at full level, amb = natural sound at low level under music, mute = picture only. layout: native (1080x1920 source, optional zoom), wide (4K laptop shot, full frame), screen (punch-in on the laptop screen over a blurred fill), endcard (blurred, darkened background for the closing title). cx/cy = centre of the stream picture in 4K source pixels.",
   "sources": {
-    "promo_1": "5fc537d0-promo_1.mp4",
+    "promo_1": "e3e8a39e-promo_1.mp4",
     "promo_2": "81b08c32-promo_2.mp4",
     "promo_3": "5941bc97-promo_3.mp4",
     "experience_1": "d2166a91-experience_1.mp4",

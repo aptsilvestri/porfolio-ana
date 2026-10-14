@@ -12,7 +12,7 @@ Source times are in seconds of the original upload. Audio: **dia** = original di
 | H1 | 0:00.00-0:00.50 | `536782e0-experience_2.mp4` | 19.00-19.50 | screen | mute | Most striking frame: Mavriq speaker on yellow, live session preview |
 | H2 | 0:00.50-0:00.97 | `d2166a91-experience_1.mp4` | 11.00-11.47 | screen | mute | CACEIS speaker preview, a second partner company |
 | H3 | 0:00.97-0:01.47 | `d2166a91-experience_1.mp4` | 21.00-21.50 | screen | mute | Two-speaker panel preview; establishes 'real sessions' before the promo story |
-| H4 | 0:01.47-0:07.67 | `5fc537d0-promo_1.mp4` | 6.63-12.83 | native | dia | 'E la novita si chiama Get Ready, quindi tra settembre/ottobre ci saranno 15 appuntamenti con aziende diverse' - names the campaign and states what it is |
+| H4 | 0:01.47-0:07.67 | `e3e8a39e-promo_1.mp4` | 6.63-12.83 | native | dia | 'E la novita si chiama Get Ready, quindi tra settembre/ottobre ci saranno 15 appuntamenti con aziende diverse' - names the campaign and states what it is |
 
 ## Social media promotion
 
@@ -50,7 +50,7 @@ Source times are in seconds of the original upload. Audio: **dia** = original di
 
 | # | Timeline | Source | Source in-out | Layout | Audio | Why it is in the cut |
 |---|---|---|---|---|---|---|
-| C1 | 0:51.03-0:51.50 | `5fc537d0-promo_1.mp4` | 0.40-0.87 | native | mute | Bookend: back to the promo hosts |
+| C1 | 0:51.03-0:51.50 | `e3e8a39e-promo_1.mp4` | 0.40-0.87 | native | mute | Bookend: back to the promo hosts |
 | C2 | 0:51.50-0:52.00 | `81b08c32-promo_2.mp4` | 21.10-21.60 | native | mute | Bookend: Tech & Data ad |
 | C3 | 0:52.00-0:52.47 | `5941bc97-promo_3.mp4` | 28.40-28.87 | native | mute | Bookend: Finance ad, smiling |
 | C4 | 0:52.47-1:00.00 | `d2166a91-experience_1.mp4` | 15.00-22.53 | endcard | mute | End card over the live session footage: GET READY + the three verticals + joinrs |

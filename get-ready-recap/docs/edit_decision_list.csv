@@ -2,7 +2,7 @@ id,section,timeline_in,timeline_out,source,source_in,source_out,layout,audio,rea
 H1,hook,0.000,0.500,536782e0-experience_2.mp4,19.000,19.500,screen,mute,"Most striking frame: Mavriq speaker on yellow, live session preview"
 H2,hook,0.500,0.967,d2166a91-experience_1.mp4,11.000,11.467,screen,mute,"CACEIS speaker preview, a second partner company"
 H3,hook,0.967,1.467,d2166a91-experience_1.mp4,21.000,21.500,screen,mute,Two-speaker panel preview; establishes 'real sessions' before the promo story
-H4,hook,1.467,7.667,5fc537d0-promo_1.mp4,6.633,12.833,native,dia,"'E la novita si chiama Get Ready, quindi tra settembre/ottobre ci saranno 15 appuntamenti con aziende diverse' - names the campaign and states what it is"
+H4,hook,1.467,7.667,e3e8a39e-promo_1.mp4,6.633,12.833,native,dia,"'E la novita si chiama Get Ready, quindi tra settembre/ottobre ci saranno 15 appuntamenti con aziende diverse' - names the campaign and states what it is"
 P1,promo,7.667,9.467,81b08c32-promo_2.mp4,0.000,1.800,native,dia,Tech & Data ad opening hook: 'Se vuoi lavorare nel mondo tech e dei dati'
 P2,promo,9.467,14.467,5941bc97-promo_3.mp4,0.800,5.800,native,dia,"Finance ad, same script structure: shows the campaign was tailored per vertical. '...ma inviare CV a vuoto non sta funzionando, ascolta qui.'"
 P3,promo,14.467,16.833,81b08c32-promo_2.mp4,4.933,7.300,native,dia,'Non serve tirare a indovinare cosa cercano i recruiter.' - the campaign promise
@@ -20,7 +20,7 @@ M1,live,44.700,45.200,536782e0-experience_2.mp4,2.000,2.500,wide,amb,Music-drive
 M2,live,45.200,45.700,d2166a91-experience_1.mp4,9.600,10.100,screen,amb,Beat cut: CACEIS speaker smiling
 M3,live,45.700,46.200,d2166a91-experience_1.mp4,20.200,20.700,wide,amb,Beat cut: wide of the panel
 L7,live,46.200,51.033,536782e0-experience_2.mp4,17.800,22.633,screen,dia,"Mavriq speaker: 'Grazie mille. Va, il palco e stato scaldato perfettamente.' - warm, memorable line to close the live section"
-C1,close,51.033,51.500,5fc537d0-promo_1.mp4,0.400,0.867,native,mute,Bookend: back to the promo hosts
+C1,close,51.033,51.500,e3e8a39e-promo_1.mp4,0.400,0.867,native,mute,Bookend: back to the promo hosts
 C2,close,51.500,52.000,81b08c32-promo_2.mp4,21.100,21.600,native,mute,Bookend: Tech & Data ad
 C3,close,52.000,52.467,5941bc97-promo_3.mp4,28.400,28.867,native,mute,"Bookend: Finance ad, smiling"
 C4,close,52.467,60.000,d2166a91-experience_1.mp4,15.000,22.533,endcard,mute,End card over the live session footage: GET READY + the three verticals + joinrs

@@ -2,12 +2,40 @@
 
 | Deliverable | File |
 |---|---|
-| **Final video** | `renders/GetReady_Recap_9x16_1080x1920.mp4` |
-| Review render (draft quality, same cut) | `renders/GetReady_Recap_review_v2.mp4` (kept local, not committed) |
+| **Current version (v2)** | `renders/GetReady_Recap_v2_9x16_1080x1920.mp4`: no edit-added text, new Promo 1 |
+| Previous version (v1, kept) | `renders/GetReady_Recap_9x16_1080x1920.mp4` |
+| v1 review render (draft quality) | `renders/GetReady_Recap_v1_review_draft.mp4` (kept local, not committed) |
 | Original music track (standalone) | `renders/GetReady_music_original.m4a` |
 | Edit decision list | `docs/edit_decision_list.md` · `.csv` · `docs/GetReady_Recap.edl` (CMX 3600) |
 | Source transcripts (machine, Italian) | `docs/transcripts_whisper_small_it.json` |
 | Editable project | `edit/` (scripted edit, details below) |
+
+## v2 revision (what changed from v1)
+
+1. **All text added in the edit is removed**: the opening title, section pills, live-session
+   labels, captions and end-card text. Built with `build.py --no-text`. Text and logos
+   that are part of the source footage are untouched: Promo 1–3's own burned-in
+   captions, the YouTube session titles, and the "joinrs"/"mavriq" marks on the streams.
+2. **Promo 1 replaced** with `e3e8a39e-promo_1.mp4`. The new file has the same shots and
+   timing as the old one (39.2 s; frame-aligned; picture differences ≈44 dB PSNR; slightly
+   different audio mix), so the same moments were kept: H4 6.63–12.83 s and C1
+   0.40–0.87 s. Both cut points still fall in silence in the new audio. Its loudness
+   matches the old file (same +10.2 dB gain to −16 LUFS).
+3. **Nothing else changed.** The timeline, beat grid and music are identical. Every
+   frame outside H4/C1 is bit-identical to v1 before titles were added. Audio outside
+   H4 differs from v1 by −62 dB (a negligible shift from the global loudness
+   normalisation).
+
+v2 QC: 1080×1920, 60.000 s, 1800 frames at 30 fps, H.264 High / AAC 48 kHz,
+−14.0 LUFS. True peak is −0.55 dBTP, from a transient in the new Promo 1 audio after AAC
+encoding (no clipping; v1 was −1.4). No black frames, freezes or silences. A/V offset is
+−5 ms (AAC delay), as in v1.
+
+Note: the end card (0:52.5–1:00) keeps its blurred, darkened treatment. Without the text it
+now plays as a dimmed blurred shot of the session. It was left as it was, per the brief.
+
+The sections below describe v1 unless noted. The titles and captions they mention are
+not in v2.
 
 ## 1. Asset inventory
 
@@ -16,7 +44,7 @@ recordings of the live experience. The source files were left untouched.
 
 | File | Content | Duration | Resolution / fps | Audio |
 |---|---|---|---|---|
-| `promo_1.mp4` | Two Joinrs hosts announce Get Ready: 15 sessions in Sept/Oct across Tech, Data, Sales, Marketing and Finance, speakers are managers + HR, a certificate and priority access | 39.2 s | 1080×1920, 30 | lav mic, clean, −23 LUFS |
+| `promo_1.mp4` (v2: `e3e8a39e-promo_1.mp4`; v1: `5fc537d0-promo_1.mp4`) | Two Joinrs hosts announce Get Ready: 15 sessions in Sept/Oct across Tech, Data, Sales, Marketing and Finance, speakers are managers + HR, a certificate and priority access | 39.2 s | 1080×1920, 30 | lav mic, clean, −23 LUFS |
 | `promo_2.mp4` | Tech & Data ad (selfie talking head): "Se vuoi lavorare nel mondo tech e dei dati…", from 15 Sept, TTEP, Reale Group, Intesa Sanpaolo, Bracco | 29.7 s | 1080×1920, 30 | clean, −21 LUFS |
 | `promo_3.mp4` | Finance ad, same script: from 17 Sept, CACEIS, AMCO, Allianz Trade, Bank Analyst, Tax Specialist | 31.6 s | 1080×1920, 30 | clean, −19 LUFS |
 | `experience_1.mp4` | Phone recording of a laptop playing **"Depositary Bank Analyst in CACEIS \| Get Ready Finance #1"** (Joinrs YouTube) | 23.4 s | 2160×3840, 30 | laptop speakers recorded in the room, −51 LUFS, noisy |

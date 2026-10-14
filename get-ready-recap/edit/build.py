@@ -12,7 +12,7 @@ what changed):
   6. mix dialogue + natural sound + music with ducking, master to -14 LUFS
   7. write titles / labels / captions (ASS) and encode the final MP4
 
-usage: python3 build.py <sources_dir> <work_dir> <out.mp4> [--draft]
+usage: python3 build.py <sources_dir> <work_dir> <out.mp4> [--draft] [--no-text]
 """
 import json, os, subprocess, sys, math
 import numpy as np
@@ -375,6 +375,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 def main():
     src_dir, work, out = sys.argv[1], sys.argv[2], sys.argv[3]
     draft = '--draft' in sys.argv
+    no_text = '--no-text' in sys.argv   # v2: no titles, labels or captions added in the edit
     os.makedirs(os.path.join(work, 'seg'), exist_ok=True)
     edl = json.load(open(os.path.join(HERE, 'edl.json')))
     segs, bpm, b = solve(edl, src_dir)
@@ -394,7 +395,8 @@ def main():
     write_ass(segs, ass, b)
     fontsdir = '/usr/share/fonts/opentype/inter'
     run(['ffmpeg', '-v', 'error', '-y', '-i', video, '-i', final_wav,
-         '-filter_complex', f"[0:v]subtitles={ass}:fontsdir={fontsdir},fade=t=out:st={TOTAL - 0.5}:d=0.5,format=yuv420p[v]",
+         '-filter_complex', (f"[0:v]fade=t=out:st={TOTAL - 0.5}:d=0.5,format=yuv420p[v]" if no_text else
+          f"[0:v]subtitles={ass}:fontsdir={fontsdir},fade=t=out:st={TOTAL - 0.5}:d=0.5,format=yuv420p[v]"),
          '-map', '[v]', '-map', '1:a', '-c:v', 'libx264', '-preset', 'veryfast' if draft else 'slow',
          '-crf', '23' if draft else '17', '-profile:v', 'high', '-level', '4.1', '-r', str(FPS),
          '-g', '60', '-c:a', 'aac', '-b:a', '256k', '-ar', '48000', '-movflags', '+faststart',
