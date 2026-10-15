@@ -9,9 +9,9 @@ Source times are in seconds of the original upload. Audio: **dia** = original di
 
 | # | Timeline | Source | Source in-out | Layout | Audio | Why it is in the cut |
 |---|---|---|---|---|---|---|
-| H1 | 0:00.00-0:00.50 | `536782e0-experience_2.mp4` | 19.00-19.50 | screen | mute | Most striking frame: Mavriq speaker on yellow, live session preview |
-| H2 | 0:00.50-0:00.97 | `d2166a91-experience_1.mp4` | 11.00-11.47 | screen | mute | CACEIS speaker preview, a second partner company |
-| H3 | 0:00.97-0:01.47 | `d2166a91-experience_1.mp4` | 21.00-21.50 | screen | mute | Two-speaker panel preview; establishes 'real sessions' before the promo story |
+| H1 | 0:00.00-0:00.50 | `ee5cc921-experience_2.mp4` | 20.67-21.17 | screen | mute | Most striking frame: Mavriq speaker on yellow, live session preview |
+| H2 | 0:00.50-0:00.97 | `9049e25d-experience_1.mp4` | 18.00-18.47 | screen | mute | CACEIS speaker preview, a second partner company |
+| H3 | 0:00.97-0:01.47 | `9049e25d-experience_1.mp4` | 29.13-29.63 | screen | mute | Two-speaker panel preview; establishes 'real sessions' before the promo story |
 | H4 | 0:01.47-0:07.67 | `e3e8a39e-promo_1.mp4` | 6.63-12.83 | native | dia | 'E la novita si chiama Get Ready, quindi tra settembre/ottobre ci saranno 15 appuntamenti con aziende diverse' - names the campaign and states what it is |
 
 ## Social media promotion
@@ -35,16 +35,16 @@ Source times are in seconds of the original upload. Audio: **dia** = original di
 
 | # | Timeline | Source | Source in-out | Layout | Audio | Why it is in the cut |
 |---|---|---|---|---|---|---|
-| L1 | 0:31.10-0:32.80 | `d2166a91-experience_1.mp4` | 2.90-4.60 | wide | dia | Wide: the live session on screen, 'Depositary Bank Analyst in CACEIS | Get Ready Finance #1'. Payoff of 'Bank Analyst' line |
-| L2 | 0:32.80-0:34.70 | `d2166a91-experience_1.mp4` | 4.60-6.50 | screen | dia | Punch-in on the CACEIS speaker: 'Ciao a tutti, grazie a voi per l'opportunita' |
-| L3 | 0:34.70-0:36.63 | `d2166a91-experience_1.mp4` | 13.30-15.23 | screen | amb | Two speakers from the same session; natural sound under music |
-| L4 | 0:36.63-0:38.23 | `d2166a91-experience_1.mp4` | 0.30-1.90 | screen | amb | Joinrs host with the session's animated eyes graphic; adds colour and the host's presence |
-| L5 | 0:38.23-0:40.37 | `536782e0-experience_2.mp4` | 9.27-11.40 | wide | dia | Second session, 'Business Analyst in Mavriq | Get Ready Marketing&Sales #1'. Host: 'e poi iniziamo, e via via c'e poi tutto il resto' |
-| L6 | 0:40.37-0:44.70 | `536782e0-experience_2.mp4` | 11.40-15.73 | screen | dia | 'Abbiamo un quiz, abbiamo un momento un po' piu interattivo' - what happened in the sessions |
-| M1 | 0:44.70-0:45.20 | `536782e0-experience_2.mp4` | 2.00-2.50 | wide | amb | Music-driven beat cut: host on the Joinrs-branded background |
-| M2 | 0:45.20-0:45.70 | `d2166a91-experience_1.mp4` | 9.60-10.10 | screen | amb | Beat cut: CACEIS speaker smiling |
-| M3 | 0:45.70-0:46.20 | `d2166a91-experience_1.mp4` | 20.20-20.70 | wide | amb | Beat cut: wide of the panel |
-| L7 | 0:46.20-0:51.03 | `536782e0-experience_2.mp4` | 17.80-22.63 | screen | dia | Mavriq speaker: 'Grazie mille. Va, il palco e stato scaldato perfettamente.' - warm, memorable line to close the live section |
+| L1 | 0:31.10-0:32.80 | `9049e25d-experience_1.mp4` | 10.87-12.57 | wide | dia | Wide: the live session on screen, 'Depositary Bank Analyst in CACEIS | Get Ready Finance #1'. Payoff of 'Bank Analyst' line |
+| L2 | 0:32.80-0:34.70 | `9049e25d-experience_1.mp4` | 12.57-14.47 | screen | dia | Punch-in on the CACEIS speaker: 'Ciao a tutti, grazie a voi per l'opportunita' |
+| L3 | 0:34.70-0:36.63 | `9049e25d-experience_1.mp4` | 21.43-23.37 | screen | amb | Two speakers from the same session; natural sound under music |
+| L4 | 0:36.63-0:38.23 | `9049e25d-experience_1.mp4` | 1.00-2.60 | screen | amb | Joinrs host with the session's animated eyes graphic; adds colour and the host's presence |
+| L5 | 0:38.23-0:40.37 | `ee5cc921-experience_2.mp4` | 10.90-13.03 | wide | dia | Second session, 'Business Analyst in Mavriq | Get Ready Marketing&Sales #1'. Host: 'e poi iniziamo, e via via c'e poi tutto il resto' |
+| L6 | 0:40.37-0:44.70 | `ee5cc921-experience_2.mp4` | 13.03-17.37 | screen | dia | 'Abbiamo un quiz, abbiamo un momento un po' piu interattivo' - what happened in the sessions |
+| M1 | 0:44.70-0:45.20 | `ee5cc921-experience_2.mp4` | 3.67-4.17 | wide | amb | Music-driven beat cut: host on the Joinrs-branded background |
+| M2 | 0:45.20-0:45.70 | `9049e25d-experience_1.mp4` | 17.00-17.50 | screen | amb | Beat cut: CACEIS speaker smiling |
+| M3 | 0:45.70-0:46.20 | `9049e25d-experience_1.mp4` | 28.33-28.83 | wide | amb | Beat cut: wide of the panel |
+| L7 | 0:46.20-0:51.03 | `ee5cc921-experience_2.mp4` | 19.47-24.30 | screen | dia | Mavriq speaker: 'Grazie mille. Va, il palco e stato scaldato perfettamente.' - warm, memorable line to close the live section |
 
 ## Closing
 
@@ -53,4 +53,4 @@ Source times are in seconds of the original upload. Audio: **dia** = original di
 | C1 | 0:51.03-0:51.50 | `e3e8a39e-promo_1.mp4` | 0.40-0.87 | native | mute | Bookend: back to the promo hosts |
 | C2 | 0:51.50-0:52.00 | `81b08c32-promo_2.mp4` | 21.10-21.60 | native | mute | Bookend: Tech & Data ad |
 | C3 | 0:52.00-0:52.47 | `5941bc97-promo_3.mp4` | 28.40-28.87 | native | mute | Bookend: Finance ad, smiling |
-| C4 | 0:52.47-1:00.00 | `d2166a91-experience_1.mp4` | 15.00-22.53 | endcard | mute | End card over the live session footage: GET READY + the three verticals + joinrs |
+| C4 | 0:52.47-1:00.00 | `9049e25d-experience_1.mp4` | 23.13-30.67 | endcard | mute | End card over the live session footage: GET READY + the three verticals + joinrs |

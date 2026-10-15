@@ -135,7 +135,10 @@ def clean_audio(name, src, work):
     else:
         # laptop speakers recorded from across the desk: very quiet (-50 LUFS),
         # boost, band-limit to the speech range, adaptive FFT denoise, compress
-        af = ('aresample=48000,volume=30dB,highpass=f=140,lowpass=f=7500,'
+        # pre-gain brings the recording to the level the chain was tuned on
+        # (~-20 LUFS; the original 4K recordings needed +30 dB, the v3 ones ~0 dB)
+        pre = -20.2 - loudness(src)
+        af = (f'aresample=48000,volume={pre:.1f}dB,highpass=f=140,lowpass=f=7500,'
               'afftdn=nr=14:nf=-40:tn=1,acompressor=threshold=-26dB:ratio=3:attack=5:release=120:makeup=2')
         kind = 'experience'
     tmp = out + '.tmp.wav'
@@ -179,11 +182,13 @@ def vf_for(s):
                 f"crop=1080:1920:(iw-1080)/2:(ih-1920)/2,setsar=1")
     if lay == 'screen':
         cx, cy = s['cx'], s['cy']
-        x0, y0 = cx - CROP_W // 2, cy - CROP_H // 2
+        # cw: crop width in source pixels (defaults to the 4K-era 1360 px)
+        cw = s.get('cw', CROP_W); ch = int(round(cw * CROP_H / CROP_W / 2) * 2)
+        x0, y0 = cx - cw // 2, cy - ch // 2
         return (f"split[a][b];"
-                f"[a]crop={CROP_W}:{CROP_H}:{x0}:{y0},scale=-2:1920,crop=1080:1920,scale=270:480,gblur=sigma=10,"
+                f"[a]crop={cw}:{ch}:{x0}:{y0},scale=-2:1920,crop=1080:1920,scale=270:480,gblur=sigma=10,"
                 f"eq=brightness=-0.24:saturation=1.35,scale=1080:1920:flags=bicubic,setsar=1[bg];"
-                f"[b]crop={CROP_W}:{CROP_H}:{x0}:{y0},"
+                f"[b]crop={cw}:{ch}:{x0}:{y0},"
                 f"scale=w='trunc({FG_W}*(1+0.04*t/{d})/2)*2':h='trunc({CROP_H * FG_W / CROP_W:.2f}*(1+0.04*t/{d})/2)*2':eval=frame:flags=lanczos,"
                 f"crop={FG_W}:{FG_H}:(iw-{FG_W})/2:(ih-{FG_H})/2[fg];"
                 f"[bg][fg]overlay=0:{FG_Y},setsar=1")

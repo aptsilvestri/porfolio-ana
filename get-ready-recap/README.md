@@ -2,13 +2,45 @@
 
 | Deliverable | File |
 |---|---|
-| **Current version (v2)** | `renders/GetReady_Recap_v2_9x16_1080x1920.mp4`: no edit-added text, new Promo 1 |
+| **Current version (v3)** | `renders/GetReady_Recap_v3_9x16_1080x1920.mp4`: v2 + new Experience 1 & 2 footage |
+| Previous version (v2, kept) | `renders/GetReady_Recap_v2_9x16_1080x1920.mp4`: no edit-added text, new Promo 1 |
 | Previous version (v1, kept) | `renders/GetReady_Recap_9x16_1080x1920.mp4` |
 | v1 review render (draft quality) | `renders/GetReady_Recap_v1_review_draft.mp4` (kept local, not committed) |
 | Original music track (standalone) | `renders/GetReady_music_original.m4a` |
 | Edit decision list | `docs/edit_decision_list.md` · `.csv` · `docs/GetReady_Recap.edl` (CMX 3600) |
 | Source transcripts (machine, Italian) | `docs/transcripts_whisper_small_it.json` |
 | Editable project | `edit/` (scripted edit, details below) |
+
+## v3 revision (what changed from v2)
+
+Only the Experience footage changed. Experience 1 is now `9049e25d-experience_1.mp4`
+(CACEIS, *Get Ready Finance #1*, 53.9 s). Experience 2 is now
+`ee5cc921-experience_2.mp4` (Mavriq, *Get Ready Marketing & Sales #1*, 65.2 s). Both are
+1080×1920 at 30 fps, and both are longer recordings of the same two sessions as the
+old 4K files.
+
+- **Mapping.** Experience 2's old clip is an exact excerpt of the new recording at
+  +1.65 s (audio cross-correlation 0.83–0.89), so every Experience 2 moment maps
+  directly. Experience 1 matches from its old 13 s mark at +8.13 s (corr 0.86). Its
+  first 13 s were a condensed take, so those moments were matched by content: the
+  greeting *"Ciao a tutti… grazie a voi per l'opportunità"* is at 10.87–14.47 s, and the
+  CACEIS speaker and host shots are at 17.0, 18.0 and 1.0 s. The hand-on-trackpad part
+  of the new Experience 2 (42–49 s) is not used.
+- **Timing is unchanged.** Every segment keeps v2's timeline position and frame count;
+  in/out points are snapped to whole frames.
+- **Framing.** Same layouts. The crop centres were re-measured on the new frames, and
+  the crops keep the same relative size: 668 px wide (Exp 1) and 630 px (Exp 2) in the
+  1080 px source. The punch-ins are upscaled about 1.6× (the old 4K source was
+  downscaled), so they're a little softer than in v2.
+- **Audio.** The same treatment and targets (−15.5 LUFS, same denoise and ducking). The
+  new recordings are about 30 dB louder than the old ones, so the fixed +30 dB
+  pre-gain is now measured per file (to about −20 LUFS before the chain, the level the
+  chain was tuned on).
+- **Verified.** Every promo frame is bit-identical to v2, and all 846 Experience frames
+  are replaced. The music samples are identical to v2. The mix outside the live
+  section differs by about −47 dB (a 0.04 dB normalisation shift). A/V offset is −5 ms
+  (AAC delay) on every live dialogue cut. 60.000 s, 1800 frames, −14.0 LUFS,
+  −1.3 dBTP, no black frames, freezes or silences.
 
 ## v2 revision (what changed from v1)
 
